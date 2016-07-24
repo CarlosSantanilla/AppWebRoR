@@ -1,0 +1,35 @@
+<style type="text/css">
+	.fondo{
+		border: 1px solid gray; background:whitesmoke; width:1000px; height: 120px; margin:auto; padding:10px 10px; border-radius: 5px
+	}
+	.boton{
+		font-size: 15px;
+		padding: 50px;
+		width: 50px;
+		height: 20px;
+		border-radius: 10px;
+		margin: auto;
+		background:gray;
+		padding:10px;
+		color:black;
+		border: 1px solid black;
+	}
+</style>
+<h2>Resultados de la búsqueda</h2>
+<div>
+	<%if @usua != [] %> 
+	    <% @usua.each do |u|%>
+	    <div class="fondo">
+		    <p><b>Nombre: </b><%= u.nombre_usuario %></p>
+		    <p><b>Apellido: </b><%= u.apellido_usuario %></p>
+		    <p><b>Teléfono: </b> <%= u.telefono %></p>
+		    <p><b>Correo: </b> <%= u.correo %></p>
+	    <% end %>
+	<% else %>
+		<p> No hay usuarios registrado con ese nombre</p>
+		</div>
+    <% end %>
+
+</div>
+<div class="boton"><%= link_to 'Volver', "/mis_usuarios/busqueda" %>
+</div>

@@ -1,0 +1,27 @@
+<style type="text/css">
+	.boton{
+		font-size: 15px;
+		padding: 50px;
+		display: block;
+		border-radius: 10px;
+		margin: auto;
+		background:gray;
+		padding:10px;
+		color:black;
+		border: 1px solid black;
+	}
+	.fondo{
+		border: 1px solid gray; background:whitesmoke; width:500px; height: 200px; margin:auto; padding:50px; border-radius: 5px
+	}
+	.txtbtn{
+		color:black; padding: 0px;
+	}
+</style>
+<html>
+<body>
+<div class="fondo">
+<p ><h2 align="center">My first aplication</h2></p>
+<div class="boton" ><p align="center" class="txtbtn"> <%= link_to 'Buscar Usuarios', '/mis_usuarios/busqueda' %></p></div>
+<div class="boton" ><p align="center" class="txtbtn"><%= link_to 'Agregar Usuarios', 'mis_usuarios/nuevo' %></p> </div>
+</div>
+</body>

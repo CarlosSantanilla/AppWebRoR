@@ -1,0 +1,53 @@
+<style type="text/css">
+	.m2{
+		position: relative;
+	}
+	.marco{
+		background: Gainsboro;
+		margin: auto;
+		border: 1px solid black;
+		height: 60px;
+		width: 1000px;
+		padding: 40px;
+	}
+	.boton{
+		font-size: 15px;
+		padding: 50px;
+		width: 50px;
+		height: 20px;
+		border-radius: 10px;
+		margin: auto;
+		background:gray;
+		padding:10px;
+		color:black;
+		border: 1px solid black;
+	}
+	.texto{
+		font-size: 15px;
+	}
+</style>
+<body>
+<h1>Módulo de Búsqueda</h1>
+<div>
+<fieldset class="marco"><legend><h3>Búsqueda por nombre</h3></legend>
+	<%= form_tag({:controller=>"mis_usuarios", :action => "uno"}, :method=>"get") do %>   
+	    <%= label_tag "Digite el nombre del usuario" %><br> 
+	    <%= text_field_tag "q","" %><br> 
+	    <%= submit_tag "Buscar" %>
+	<% end %>
+</fieldset>
+	
+</div>
+
+
+<div class="m2">
+	<fieldset class="marco" ><legend><h3>Búsqueda completa</h3></legend>
+		<p>Para ver todos los registros pulse el botón</p>
+		<%= form_tag({:controller=>"mis_usuarios", :action => "todos"}, :method=>"get") do %>
+	    <%= submit_tag "Buscar" %>
+		<% end %>
+	</fieldset>
+</div>
+
+<div class="boton"><%= link_to "Volver", "/mis_usuarios"%></div>
+</body>

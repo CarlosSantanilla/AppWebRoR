@@ -1,0 +1,29 @@
+<style type="text/css">
+	.fondo{
+		border: 1px solid gray; background:whitesmoke; width:1000px; height: 220px; margin:auto; padding:10px 10px; border-radius: 5px
+	}
+</style>
+<div >
+    <h1>Nuevo Usuario</h1>
+</div>
+
+<div>
+  <div>
+	<%= form_for :Usuario  do |f| %>  
+	  <div class="fondo"> 
+	  	<%= f.label :Nombre_del_usuario %>
+	    <%= f.text_area :nombre_usuario %> <br> 
+	    <%= f.label :Apellido_del_usuario %>
+	    <%= f.text_area :apellido_usuario %> <br>
+	    <%= f.label :Teléfono_del_usuario %>
+	    <%= f.text_area :telefono %> <br>
+	    <%= f.label :Correo_del_usuario %>
+	    <%= f.text_area :correo %> <br>
+	  </div> 
+	  <div> 
+	    <%= f.submit "Ingresar Nuevo Usuario" %> 
+	  </div>
+	<% end %>
+    
+  </div>
+</div>
